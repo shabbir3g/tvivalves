@@ -34,7 +34,7 @@
 	   
 	   <?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 	   <!--[if lt IE 8]>
 	   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]-->
@@ -43,7 +43,7 @@
                             HEADER
   =========================================================-->
   <header class="bg-image-1">
-  <div class="menu-toggle-bar"> 
+	<div class="menu-toggle-bar"> 
 		<a href="#"><i class="fas fa-bars"></i></a>
 	</div>
     <div id="stuck_container b2bdd-header-container" class="stuck_container b2bdd-header-container">
@@ -59,56 +59,51 @@
 		  	 ?>
 	
      
-		<form class="tvi-search-form" action="https://products.tvivalves.com/keyword/" method="get">
-			<input type="text" name="keyword" id="s" placeholder="Enter Keyword"><button type="submit">Search</button>
+		<form class="tvi-search-form" action="http://products.tvivalves.com/keyword/" method="get">
+			<input type="text" name="keyword" placeholder="Enter Keyword"><button type="submit">Search</button>
 		</form>
     </div>
-
-    
 	
 	
 	<?php if(is_front_page()): ?>
-    <div class="camera_container">
-				<div id="camera" class="camera_wrap">
-				   <div class="slider-area">
-					  <div class="owl-carousel owl-theme">
-
-
-						
-
-					<?php $home_slider =  get_field('home_slider','options'); 
-						if($home_slider):  
-						foreach($home_slider as $slider): ?>
-						 <div class="item">
-<div class="slider" style="background-image:url(<?php echo $slider['slider_background']['url']; ?>);">
-							   <div class="camera_caption fadeIn">
-								  <div class="onCamera">
-									 <div class="brand">
-										<span class="bsh"></span>
-										<div><img src="<?php echo $slider['slider_image']['url']; ?>" alt="<?php echo $slider['slider_image']['title']; ?>"></div>
-									 </div>
-									 <h3></h3>
-									 <hr>
-									 <h1><?php echo $slider['slider_text']; ?></h1>
-								  </div>
-							   </div>
-							</div>
-						 </div>
-						<?php endforeach; endif; ?>
-
-
-
-
-					  </div>
-				   </div>
-				   <div class="banner-slider indicator-button"> 
-					  <a class="customPrevBtn" href="javascript:avoid(0)"><i class="fas fa-chevron-left"></i></a>
-					  <a class="customNextBtn" href="javascript:avoid(0)"><i class="fas fa-chevron-right"></i></a>
-				   </div>
-				</div>
-			 </div>
-			 
-	<?php else: ?>
+	<div class="onCamera">
+		 <?php $slider_image =  get_field('slider_image','options'); 
+		if($slider_image):  ?>
+		  <div class="brand">
+			<span class="bsh"></span>
+			<div><img src="<?php echo $slider_image['url']; ?>" alt="TVI Valves"></div>
+		  
+		  </div>
+		  <?php endif; ?>
+		  
+		  <h3></h3>
+		  <hr>
+		   <?php $slider_text =  get_field('slider_text','options'); 
+		if($slider_text):  ?>
+		  <h1><?php echo $slider_text; ?></h1>
+		  <?php endif; ?>
+		</div>
+		<div class="camera_container">
+		
+		
+		
+		
+		  <div id="camera" class="camera_wrap">
+		  
+		  <?php $home_slider =  get_field('home_slider','options'); 
+			if($home_slider):  
+			foreach($home_slider as $slider): ?>
+			<div data-src="<?php echo $slider['slider_background']['url']; ?>">
+			  <div class="camera_caption fadeIn">
+			  </div>
+			</div>
+			<?php endforeach; endif; ?>
+		  </div>
+		</div>
+		
+		
+		<?php else: ?>
+		
 	<?php $page_banner =  get_field('page_banner','options');
 
 	if($page_banner):  ?>
@@ -130,6 +125,6 @@
 
       </div>
     </section>
+		
 	<?php endif;  endif; ?>
-  	</header>
-
+	  </header>

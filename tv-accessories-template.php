@@ -41,7 +41,7 @@ get_header(); ?>
 
 												<?php $marked_list_acc =  $accessoriesitem['marked_list_acc']; 
 												foreach($marked_list_acc as $marked_list_accss):  ?>
-												<li><i class="fas fa-angle-double-right"></i> <?php echo  $marked_list_accss['list_item_acc']; ?></li>
+												<li> <?php echo  $marked_list_accss['list_item_acc']; ?></li>
 												<?php endforeach; ?>
 
 

@@ -33,7 +33,7 @@ get_header(); ?>
 										<ul class="marked-list">
 											<?php  $list_items = $marked_listsss['list_items'];
 											foreach($list_items as $list_itemsssss): ?>
-											<li><i class="fas fa-angle-double-right"></i> <?php echo $list_itemsssss['list_item']; ?></li>
+											<li> <?php echo $list_itemsssss['list_item']; ?></li>
 											<?php endforeach;  ?>
 										</ul>
 									</div>

@@ -5,6 +5,7 @@
 
 	$('.menu-toggle-bar a').click(function(){
 		$('.stuck_container').slideToggle();
+		$('.sf-menu').slideToggle();
 		
 	});
 	

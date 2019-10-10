@@ -163,21 +163,44 @@ function tvivalves_scripts() {
 	
 	
 	wp_enqueue_style( 'tvivalves-grid', get_template_directory_uri().'/css/grid.css' );
-	wp_enqueue_style( 'tvivalves-carousel', get_template_directory_uri().'/css/owl.carousel.min.css' );
-	wp_enqueue_style( 'tvivalves-theme.default', get_template_directory_uri().'/css/owl.theme.default.min.css' );
+	wp_enqueue_style( 'tvivalves-camera', get_template_directory_uri().'/css/camera.css' );
 	wp_enqueue_style( 'tvivalves-css-style', get_template_directory_uri().'/css/style.css' );
 	wp_enqueue_style( 'tvivalves-animate', get_template_directory_uri().'/css/animate.css' );
 	wp_enqueue_style( 'tvivalves-mailform', get_template_directory_uri().'/css/rd-mailform.css' );
-	wp_enqueue_style( 'tvivalves-fontawesome', get_template_directory_uri().'/css/fontawesome.min.css' );
+	//wp_enqueue_style( 'tvivalves-fontawesome', get_template_directory_uri().'/css/fontawesome.min.css' );
+	wp_enqueue_style( 'tvivalves-fontawesome', get_template_directory_uri().'/css/font-awesome.min.css' );
+	
 	wp_enqueue_style( 'tvivalves-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'tvivalves-responsive', get_template_directory_uri().'/css/responsive.css' );
 
 
+
+
+
 	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'davide-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true );
+	
+	wp_enqueue_script( 'davide-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-navbar', get_template_directory_uri() . '/js/jquery.rd-navbar.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-camera', get_template_directory_uri() . '/js/camera.js', array('jquery'), '', true );
 	wp_enqueue_script( 'davide-fontawesome', get_template_directory_uri() . '/js/fontawesome.min.js', array('jquery'), '', true );
 	wp_enqueue_script( 'davide-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true );
-	wp_enqueue_script( 'davide-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-mobile', get_template_directory_uri() . '/js/jquery.mobile.customized.min.js', array('jquery'), '', true );
+	
+	wp_enqueue_script( 'davide-device', get_template_directory_uri() . '/js/device.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-equalheights', get_template_directory_uri() . '/js/jquery.equalheights.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-form', get_template_directory_uri() . '/js/jquery.form.min.js', array('jquery'), '', true );
+	
+	wp_enqueue_script( 'davide-mailform', get_template_directory_uri() . '/js/jquery.rd-mailform.min.js', array('jquery'), '', true );
+	
+	wp_enqueue_script( 'davide-parallax', get_template_directory_uri() . '/js/jquery.rd-parallax.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-totop', get_template_directory_uri() . '/js/jquery.ui.totop.js', array('jquery'), '', true );
+
+	wp_enqueue_script( 'davide-events', get_template_directory_uri() . '/js/pointer-events.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-tmstickup', get_template_directory_uri() . '/js/tmstickup.js', array('jquery'), '', true );
+	wp_enqueue_script( 'davide-wow', get_template_directory_uri() . '/js/wow.js', array('jquery'), '', true );
 
 
 }

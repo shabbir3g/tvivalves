@@ -1,6 +1,6 @@
 
 @media all and (max-width: 991px) {
-	#stuck_container\ b2bdd-header-container {
+/*	#stuck_container\ b2bdd-header-container {
 		display: inherit;
 	}
 	 .sf-menu > li + li {
@@ -10,8 +10,24 @@
 		margin-right: 0;
 		padding-bottom: 23px;
 	}
+	.stuck_container {
+	height: inherit;
+	padding-top: 36px;
+	margin-bottom: 36px;
+} */
+.item .slider {
+	height: 397px;
+	padding: 0;
+}
 }
 @media all and (max-width: 767px) {
+    .item .slider {
+	height: 300px;
+	padding: 0;
+}
+    .stuck_container {
+	height: inherit;
+}
  .sf-menu > li + li {
 	margin-left: 20px;
 }
@@ -22,13 +38,13 @@
 }
 .item .slider {
 	background-size: 100% 100%;
-	padding: 200px 0;
 }
 header .onCamera > .brand {
-	margin-top: 70px;
+	margin-top: 25px;
 }
 .banner-slider.indicator-button {
 	position: relative;
+	display: none;
 }
 	.stuck_container {
 	padding-top: 0;
@@ -43,10 +59,10 @@ header .onCamera > .brand {
 .sf-menu > li::before {
 	content: "";
 }
-
+/*
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 700px) { */
 	.sf-menu > li {
 		position: inherit;
 		float: none;
@@ -59,16 +75,16 @@ header .onCamera > .brand {
 	}
 	.menu-toggle-bar {
 		display: block;
-		padding: 12px 32px;
+		padding: 16px 32px;
 	}
 	
-	.brand {
+/*	.brand {
 		width: 200px;
 		height: 104px;
 	}
 	.brand .bsh {
 		width: 200px;
-	}
+	}*/
 	
 .sf-menu .expand, .sub-menu .expand {
   color: #ffffff;
@@ -116,3 +132,72 @@ header .onCamera > .brand {
 	margin-top: 53px;
 }
 }
+
+
+/* 
+
+
+
+
+@media all and (max-width: 991px) {
+	#stuck_container\ b2bdd-header-container {
+		display: inherit;
+	}
+	 .sf-menu > li + li {
+	margin-left: 20px;
+	}
+	.b2bdd-menu {
+		margin-right: 0;
+		padding-bottom: 23px;
+	}
+}
+@media all and (max-width: 767px) {
+	#stuck_container\ b2bdd-header-container {
+		display: none;
+	}
+	.menu-toggle-bar {
+		display: block;
+		padding: 12px 32px;
+	}
+ .sf-menu > li + li {
+	margin-left: 20px;
+}
+
+.b2bdd-menu {
+	margin-right: 0;
+	padding-bottom: 23px;
+}
+.item .slider {
+	background-size: 100% 100%;
+	height: 50vh;
+}
+header .onCamera > .brand {
+	margin-top: 149px;
+}
+.banner-slider.indicator-button {
+	position: relative;
+}
+}
+
+@media all and (max-width: 700px) {
+	.sf-menu > li {
+		position: inherit;
+		float: none;
+		margin: 0 !important;
+		padding-bottom: 10px;
+	}
+	
+	
+	.brand {
+		width: 200px;
+		height: 104px;
+	}
+	.brand .bsh {
+		width: 200px;
+	}
+}
+@media all and (max-width: 414px) {
+header .onCamera > .brand {
+	margin-top: 53px;
+}
+} */

@@ -11,6 +11,47 @@ Text Domain: tvivalves
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-tvivalves
 */
 
+.well-md .row > div {
+	margin-bottom: 50px;
+}
+.menu-toggle-bar {
+	text-align: right;
+	padding-right: 30px;
+	display: none;
+}
+.menu-toggle-bar a{
+	color: #fff;
+	font-size: 30px;
+}
+.sf-menu > li.current-menu-item > a {
+	color: #c93428;
+}
+a.signups-button{
+	border: 1px solid rgb(225, 225, 225); 
+	color: rgb(255, 255, 255); 
+	display: inline-block; 
+	padding: 10px 20px; 
+	text-shadow: none; 
+	border-radius: 20px; 
+	background-color: rgb(128, 0, 0);
+}
+#ctct_button_footer{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:10px;
+	color:#999999;
+	margin-top: 10px;
+}
+
+@media all and (min-width: 768px) {
+.sf-menu li:hover > ul{
+	display: block;
+	animation: fadeIn 1s;
+}
+.expand{
+    display: none;
+}
+}
+/* 
 .menu-toggle-bar {
 	text-align: right;
 	padding-right: 30px;
@@ -21,28 +62,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	font-size: 30px;
 }
 
-.item .slider{
-	background-size: 100% 100%; 
-	padding: 300px 0;
-}
 
-
-.marked-list > li:before {
-	font-family: "Font Awesome 5 Free";
-	content: "\f101";
-	padding-right: 11px;
-	display: none;
-
-}
-.fa-angle-double-right {
-	margin: ;
-	margin-right: 10px;
-}
 .sf-menu > li.current-menu-item > a {
 	color: #c93428;
-}
-.well-md .row > div {
-	margin-bottom: 50px;
 }
 
 a.signups-button{
@@ -68,13 +90,5 @@ a.signups-button{
 	margin-top: 10px;
 	padding: 19px 0 19px 14px;
 }
-.sf-menu ul ul {
-	width: 179px;
-	padding: 4px 0 4px 12px;
-}
-@media all and (min-width: 701) {
-.sf-menu li:hover > ul{
-	display: block;
-	animation: fadeIn 1s;
-}
-}
+
+ */

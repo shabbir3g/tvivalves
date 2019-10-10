@@ -1,40 +1,34 @@
-(function ($) {
-	"use strict";
 
-	$(document).ready(function(){
+/* Camera
+========================================================*/
+;(function ($) {
+var o = $('#camera');
+    if (o.length > 0) {
+        if (!(isIE() && (isIE() > 9))) {
+            include('/js/jquery.mobile.customized.min.js');
+        }
 
-	var owl = $('.slider-area .owl-carousel');
-	owl.owlCarousel({
-		loop: true,
-		autoplay:true,
-		items: 1,
-		dots: false,
-		mouseDrag: false,
-		animateOut: 'fadeOut',
-		animateIn: 'fadeIn',
+        include('/js/camera.js');
 
+        $(document).ready(function () {
+            o.camera({
+                autoAdvance: true,
+                height: '40.07142857142857%',
+                minHeight: '300px',
+                pagination: true,
+                thumbnails: false,
+                playPause: false,
+                hover: false,
+                loader: 'none',
+                navigation: true,
+                navigationHover: true,
+                mobileNavHover: false,
+                fx: 'simpleFade'
+            })
+        });
+    }
+})(jQuery);
 
-	});
-	
-	var owl = $('.slider-area .owl-carousel');
-	owl.owlCarousel();
-	// Go to the next item
-	$('.banner-slider .customNextBtn').click(function() {
-		owl.trigger('next.owl.carousel');
-	})
-	// Go to the previous item
-	$('.banner-slider .customPrevBtn').click(function() {
-		// With optional speed parameter
-		// Parameters has to be in square bracket '[]'
-		owl.trigger('prev.owl.carousel', [300]);
-	})
-	
-	
-	
-	});
-
-}(jQuery));		
-		
 function include(scriptUrl) {
     document.write('<script src="' + scriptUrl + '"></script>');
 }
@@ -207,37 +201,6 @@ if (!result) {
 }
 document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
 
-/* Camera
-========================================================*/
-;(function ($) {
-var o = $('#camera');
-    if (o.length > 0) {
-        if (!(isIE() && (isIE() > 9))) {
-            include('/js/jquery.mobile.customized.min.js');
-        }
-
-        include('/js/camera.js');
-
-        $(document).ready(function () {
-            o.camera({
-                autoAdvance: true,
-                height: '40.07142857142857%',
-                minHeight: '300px',
-                pagination: true,
-                thumbnails: false,
-                playPause: false,
-                hover: false,
-                loader: 'none',
-                navigation: true,
-                navigationHover: true,
-                mobileNavHover: false,
-                fx: 'simpleFade'
-            })
-        });
-    }
-})(jQuery);
-
-
 
 /* Parallax
  =============================================*/
@@ -257,5 +220,3 @@ var o = $('#camera');
 
 /* Search.js
  ========================================================*/
-
-
